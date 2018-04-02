@@ -53,7 +53,8 @@ def get_trace_log(id_string, path_to_file):
 
 ip = "10.0.212.197"
 id = 100500
-full_path_to_down_file = download_log_file(get_local_path(), 'auth.log', ip)
+file_mask = 'auth.log'
+full_path_to_down_file = download_log_file(get_local_path(), file_mask, ip)
 if os.path.isfile(full_path_to_down_file):
     print(get_trace_log(id, full_path_to_down_file))
 else:
